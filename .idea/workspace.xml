@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edcb916c-56d6-4cff-a715-9b7512eecdbb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Spring-CineStream.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +18,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LucasAlec"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LucasAlec&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/LucasAlec/Spring-CineStream.git",
-    "accountId": "773af7b4-9b14-4954-a091-1a9500d4a585"
+    "url": "https://github.com/Priscila-Santos/Spring-CineStream.git",
+    "accountId": "77b94291-ce59-4893-8aed-a94f79197d9a"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -45,9 +48,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/Priscila",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Lucas_Alecsander/Desktop/spring-cinestream",
+    "last_opened_file_path": "C:/Users/pri05/OneDrive/Documentos/SantanderCoders/cine-strem-web-projeto/Spring-CineStream",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,8 +67,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
       </set>
     </attachedChunks>
   </component>
@@ -81,6 +84,7 @@
       <workItem from="1730500646185" duration="45000" />
       <workItem from="1730500710074" duration="150000" />
       <workItem from="1730502236332" duration="79000" />
+      <workItem from="1730767322117" duration="1001000" />
     </task>
     <servers />
   </component>
