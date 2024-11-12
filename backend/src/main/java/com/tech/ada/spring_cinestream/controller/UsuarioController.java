@@ -2,6 +2,7 @@ package com.tech.ada.spring_cinestream.controller;
 
 import com.tech.ada.spring_cinestream.dto.request.UsuarioRequest;
 import com.tech.ada.spring_cinestream.dto.response.UsuarioResponse;
+import com.tech.ada.spring_cinestream.exception.AlreadyExistsException;
 import com.tech.ada.spring_cinestream.exception.NotFoundException;
 import com.tech.ada.spring_cinestream.service.UsuarioService;
 import org.springframework.http.HttpStatus;
@@ -18,14 +19,14 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioResponse> criarUsuario(@RequestBody UsuarioRequest usuario) {
+    public ResponseEntity<UsuarioResponse> criarUsuario(@RequestBody UsuarioRequest usuario) throws AlreadyExistsException {
         UsuarioResponse novoUsuario =  usuarioService.criar(usuario);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
     }
 
     @GetMapping
     public ResponseEntity<UsuarioResponse> buscarUsuarioPorEmail(@RequestParam String email) throws NotFoundException {
-        UsuarioResponse emailUsuario = usuarioService.buscar(email);
+        UsuarioResponse emailUsuario = usuarioService.buscarPorEmail(email);
         return ResponseEntity.status(HttpStatus.OK).body(emailUsuario);
     }
 }

@@ -50,6 +50,24 @@ public class ApiClient {
         return response.getBody();
     }
 
+    public TmdbFilme buscarDetalhesFilme(Long id) {
+        String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
+                .path("/movie/" + id)
+                .toUriString();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", String.format("Bearer %s", apiKey));
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        var response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                entity,
+                TmdbFilme.class
+        );
+        return response.getBody();
+    }
+
     public TmdbListaGeneros generosFilmes() {
         String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
                 .path("/genre/movie/list")
@@ -95,11 +113,12 @@ public class ApiClient {
 
 
     // SERIES
-    public Page<TmdbSerie> buscarSeriesPorTitulo(String titulo) {
+    public Page<TmdbSerie> buscarSeriesPorTitulo(String titulo, Integer page) {
         String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
                 .path("/search/tv")
                 .queryParam("api_key", apiKey)
                 .queryParam("query", titulo)
+                .queryParam("page", page)
                 .queryParam("language", "pt-BR")
                 .toUriString();
 
@@ -159,6 +178,24 @@ public class ApiClient {
                 new ParameterizedTypeReference<Page<TmdbSerie>>() {}
         );
 
+        return response.getBody();
+    }
+
+    public TmdbSerie buscarDetalhesSerie(Long id) {
+        String url = UriComponentsBuilder.fromHttpUrl(apiBaseUrl)
+                .path("/tv/" + id)
+                .toUriString();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", String.format("Bearer %s", apiKey));
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        var response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                entity,
+                TmdbSerie.class
+        );
         return response.getBody();
     }
 }

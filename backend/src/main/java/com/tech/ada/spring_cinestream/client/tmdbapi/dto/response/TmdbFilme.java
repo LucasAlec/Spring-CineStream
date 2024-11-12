@@ -10,13 +10,15 @@ public class TmdbFilme {
     private String releaseDate;
     private double voteAverage;
     private String posterPath;
+    private Long id;
 
-    public TmdbFilme(String title, String overview, String releaseDate, double voteAverage, String posterPath) {
+    public TmdbFilme(String title, String overview, String releaseDate, double voteAverage, String posterPath, Long id) {
         this.title = title;
         this.overview = overview;
         this.releaseDate = releaseDate;
         this.voteAverage = voteAverage;
         this.posterPath = posterPath;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -57,5 +59,13 @@ public class TmdbFilme {
 
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

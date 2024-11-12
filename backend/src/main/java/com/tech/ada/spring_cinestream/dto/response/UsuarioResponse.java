@@ -1,18 +1,28 @@
 package com.tech.ada.spring_cinestream.dto.response;
 
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbFilme;
+import com.tech.ada.spring_cinestream.client.tmdbapi.dto.response.TmdbSerie;
+
+import java.util.List;
+
 public class UsuarioResponse {
     private Long id;
     private String nome;
     private String nickname;
+    private String email;
+    private List<TmdbFilme> filmesFavoritos;
+    private List<TmdbSerie> seriesFavoritas;
 
     public UsuarioResponse () {
     }
 
-
-    public UsuarioResponse(Long id, String nome, String nickname) {
+    public UsuarioResponse(Long id, String nome, String nickname, String email, List<TmdbFilme> filmesFavoritos, List<TmdbSerie> seriesFavoritas) {
         this.id = id;
         this.nome = nome;
         this.nickname = nickname;
+        this.email = email;
+        this.filmesFavoritos = filmesFavoritos;
+        this.seriesFavoritas = seriesFavoritas;
     }
 
     public Long getId() {
@@ -37,5 +47,29 @@ public class UsuarioResponse {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<TmdbFilme> getFilmesFavoritos() {
+        return filmesFavoritos;
+    }
+
+    public void setFilmesFavoritos(List<TmdbFilme> filmesFavoritos) {
+        this.filmesFavoritos = filmesFavoritos;
+    }
+
+    public List<TmdbSerie> getSeriesFavoritas() {
+        return seriesFavoritas;
+    }
+
+    public void setSeriesFavoritas(List<TmdbSerie> seriesFavoritas) {
+        this.seriesFavoritas = seriesFavoritas;
     }
 }
